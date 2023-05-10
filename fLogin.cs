@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using iMart.DAO;
 
 namespace iMart
 {
@@ -57,10 +58,24 @@ namespace iMart
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fMainMenu f = new fMainMenu();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string userName = txbUsername.Text;
+            string passWord = txbPassword.Text;
+            if (Login(userName, passWord))
+            {
+                fMainMenu f = new fMainMenu();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username or password!");
+            }
+        }
+
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
     }
 }
