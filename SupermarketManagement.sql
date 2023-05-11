@@ -72,3 +72,11 @@ GO
 
 EXEC dbo.USP_GetAccountByUserName @userName = N'admin'
 DROP PROC dbo.USP_GetAccountByUserName
+
+CREATE PROC USP_Login
+@userName nvarchar(100), @passWord nvarchar(100)
+AS
+BEGIN
+	SELECT * FROM dbo.ACCOUNT WHERE userName = @userName AND passWord = @passWord
+END
+GO
