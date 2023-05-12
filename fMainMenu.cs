@@ -119,7 +119,7 @@ namespace iMart
 
         private void fMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Do you really want to log out?", "Warning", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Do you really want to log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }

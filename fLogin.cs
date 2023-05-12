@@ -56,6 +56,12 @@ namespace iMart
             }
         }
 
+        private void resetTextboxs()
+        {
+            txbUsername.Clear();
+            txbPassword.Clear();
+
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txbUsername.Text;
@@ -65,11 +71,13 @@ namespace iMart
                 fMainMenu f = new fMainMenu();
                 this.Hide();
                 f.ShowDialog();
+                this.resetTextboxs();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Incorrect username or password!");
+                MessageBox.Show("Incorrect username or password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.resetTextboxs();
             }
         }
 
