@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using iMart.DTO;
 using iMart.Forms;
 
 namespace iMart
@@ -18,12 +19,33 @@ namespace iMart
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public fMainMenu()
+
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.accountType); }
+        }
+
+        public fMainMenu(Account acc)
         {
             InitializeComponent();
+
+            this.LoginAccount = acc;
+
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            LoginAccount = loginAccount;
+        }
+
+        //Method
+
+        void ChangeAccount(int type)
+        {
+            btnEmployee.Enabled = type == 1;
+            btnInventory.Enabled = type == 1;
         }
 
         private void ActivateButton(object senderBtn)
@@ -123,11 +145,6 @@ namespace iMart
             {
                 e.Cancel = true;
             }
-        }
-
-        private void btnAccount_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

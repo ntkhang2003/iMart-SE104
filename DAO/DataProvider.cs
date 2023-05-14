@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
+using System.Configuration;
 
 namespace iMart.DAO
 {
@@ -18,7 +19,8 @@ namespace iMart.DAO
             private set { DataProvider.instance = value; }
         }
         private DataProvider() { }
-        private string connectionSTR = "Data Source=Khang;Initial Catalog=SUPERMARKET;Integrated Security=True";
+
+        private string connectionSTR = ConfigurationManager.ConnectionStrings["connectionSTR"].ConnectionString;
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
