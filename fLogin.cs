@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using iMart.DAO;
+using iMart.DTO;
 
 namespace iMart
 {
@@ -68,7 +69,8 @@ namespace iMart
             string passWord = txbPassword.Text;
             if (Login(userName, passWord))
             {
-                fMainMenu f = new fMainMenu();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                fMainMenu f = new fMainMenu(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.resetTextboxs();

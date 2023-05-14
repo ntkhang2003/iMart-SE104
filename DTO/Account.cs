@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iMart.DTO1
+namespace iMart.DTO
 {
     public class Account
     {
@@ -25,7 +25,7 @@ namespace iMart.DTO1
             this.passWord = row["passWord"].ToString();
         }
 
-        private int accountType;
+        public int accountType;
         public int AccountType
         {
             get { return accountType; }
