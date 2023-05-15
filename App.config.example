@@ -4,6 +4,10 @@
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
     </startup>
 	<connectionStrings>
+<<<<<<< HEAD:App.config
 		<add name="connectionSTR" connectionString="Data Source=LAPTOP-DJGN0NTK\SQLEXPRESS;Initial Catalog=SUPERMARKET;Integrated Security=True"/>
+=======
+		<add name="connectionSTR" connectionString="--edit--here--"/>
+>>>>>>> c077da12950df256954564969d9461555cf39046:App.config.example
 	</connectionStrings>
 </configuration>

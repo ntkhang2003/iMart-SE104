@@ -153,10 +153,5 @@ namespace iMart
                 e.Cancel = true;
             }
         }
-
-        private void btnAccount_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
