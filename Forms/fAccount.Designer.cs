@@ -30,16 +30,16 @@
         {
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtReEnterPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassWord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -58,27 +58,28 @@
             this.btnUpdate.Location = new System.Drawing.Point(543, 382);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 29);
-            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.txtReEnterPass);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(85, 289);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(552, 62);
-            this.panel5.TabIndex = 9;
+            this.panel5.TabIndex = 5;
             // 
-            // textBox4
+            // txtReEnterPass
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(222, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(305, 30);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.UseSystemPasswordChar = true;
+            this.txtReEnterPass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReEnterPass.Location = new System.Drawing.Point(222, 16);
+            this.txtReEnterPass.Name = "txtReEnterPass";
+            this.txtReEnterPass.Size = new System.Drawing.Size(305, 30);
+            this.txtReEnterPass.TabIndex = 1;
+            this.txtReEnterPass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -92,21 +93,21 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.txtNewPass);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(85, 221);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(552, 62);
-            this.panel4.TabIndex = 10;
+            this.panel4.TabIndex = 4;
             // 
-            // textBox3
+            // txtNewPass
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(222, 16);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(305, 30);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txtNewPass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(222, 16);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(305, 30);
+            this.txtNewPass.TabIndex = 0;
+            this.txtNewPass.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -115,26 +116,26 @@
             this.label3.Location = new System.Drawing.Point(20, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 24);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 1;
             this.label3.Text = "New password:";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtPassWord);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(85, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(552, 62);
-            this.panel3.TabIndex = 11;
+            this.panel3.TabIndex = 3;
             // 
-            // textBox2
+            // txtPassWord
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(222, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 30);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtPassWord.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWord.Location = new System.Drawing.Point(222, 16);
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.Size = new System.Drawing.Size(305, 30);
+            this.txtPassWord.TabIndex = 1;
+            this.txtPassWord.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -148,20 +149,20 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtDisplayName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(85, 85);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(552, 62);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 2;
             // 
-            // textBox1
+            // txtDisplayName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(222, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtDisplayName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Location = new System.Drawing.Point(222, 16);
+            this.txtDisplayName.Name = "txtDisplayName";
+            this.txtDisplayName.Size = new System.Drawing.Size(305, 30);
+            this.txtDisplayName.TabIndex = 0;
             // 
             // label1
             // 
@@ -170,7 +171,7 @@
             this.label1.Location = new System.Drawing.Point(20, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 24);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Display name:";
             // 
             // panel1
@@ -180,7 +181,7 @@
             this.panel1.Location = new System.Drawing.Point(85, 17);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(552, 62);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -198,7 +199,7 @@
             this.lbUsername.Location = new System.Drawing.Point(20, 19);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(112, 24);
-            this.lbUsername.TabIndex = 0;
+            this.lbUsername.TabIndex = 1;
             this.lbUsername.Text = "Username:";
             // 
             // panel6
@@ -214,10 +215,11 @@
             this.panel6.Location = new System.Drawing.Point(39, 12);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(731, 427);
-            this.panel6.TabIndex = 14;
+            this.panel6.TabIndex = 0;
             // 
             // fAccount
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -242,16 +244,16 @@
         #endregion
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtReEnterPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassWord;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtUsername;

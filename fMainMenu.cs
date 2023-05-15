@@ -124,7 +124,14 @@ namespace iMart
         private void btnAccount_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new fAccount());
+            fAccount f = new fAccount(LoginAccount);
+            f.UpdateAccount += f_UpdateAccount;
+
+            OpenChildForm(f);
+        }
+
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
         }
 
         private void picLogo_Click(object sender, EventArgs e)
