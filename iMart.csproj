@@ -70,8 +70,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillDetailDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillDetail.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\Product.cs" />
+    <Compile Include="DTO\Temp.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>

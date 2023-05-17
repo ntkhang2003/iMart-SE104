@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using iMart.DAO;
 using iMart.DTO;
 using iMart.Forms;
 
@@ -44,8 +45,8 @@ namespace iMart
 
         void ChangeAccount(int type)
         {
-            btnEmployee.Enabled = type == 1;
-            btnInventory.Enabled = type == 1;
+            btnEmployee.Visible = type == 1;
+            btnInventory.Visible = type == 1;
         }
 
         private void ActivateButton(object senderBtn)
