@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace iMart.DAO
         }
         private BillDAO() { }
 
-        public void InsertBill()
+        public void InsertBill(string userName)
         {
-            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill");
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill @userName ", new object[] { userName });
         }
         public int GetMaxIDBill()
         {
@@ -27,6 +28,18 @@ namespace iMart.DAO
         public void AddTotalPrice(int id, double totalPrice)
         {
             DataProvider.Instance.ExecuteNonQuery("USP_AddTotalPrice @idBill , @totalPrice", new object[] { id, totalPrice });
+        }
+        public DataTable GetListBillByDate(DateTime dateBegin, DateTime dateEnd)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_GetListBillByDate @dateBegin , @dateEnd", new object[] { dateBegin, dateEnd });
+        }
+        public int GetNumberOfBill(DateTime dateBegin, DateTime dateEnd)
+        {
+            return (int)DataProvider.Instance.ExecuteScalar("SELECT COUNT(idBill) FROM dbo.BILL WHERE billDate >= '" + dateBegin + "' AND billDate <= '" + dateEnd + "'");
+        }
+        public double GetTotalOfTotal(DateTime dateBegin, DateTime dateEnd)
+        {
+            return (double)DataProvider.Instance.ExecuteScalar("SELECT SUM(totalPrice) FROM dbo.BILL WHERE billDate >= '" + dateBegin + "' AND billDate <= '" + dateEnd + "'");
         }
     }
 }

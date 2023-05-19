@@ -38,6 +38,7 @@ namespace iMart
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            lbWelcome.Text += " " + loginAccount.DisplayName;
             LoginAccount = loginAccount;
         }
 
@@ -101,7 +102,7 @@ namespace iMart
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new fHome());
+            OpenChildForm(new fHome(LoginAccount));
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
