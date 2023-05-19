@@ -91,6 +91,7 @@ namespace iMart.Forms
                 btnAddOrder.Enabled = true;
                 BillDAO.Instance.AddTotalPrice(idBill, Convert.ToDouble(txbTotal.Text.Remove(0, 1)));
                 txbTotal.Text = "$0";
+                btnPay.Enabled = false;
             }
         }
 
@@ -123,6 +124,7 @@ namespace iMart.Forms
             BillDAO.Instance.InsertBill();
             lsvBill.Visible = true;
             btnAddOrder.Enabled = false;
+            btnPay.Enabled = true;
         }
     }
 }

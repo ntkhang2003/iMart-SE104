@@ -39,6 +39,7 @@
             this.txbItemName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPay = new FontAwesome.Sharp.IconButton();
+            this.btnAddOrder = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,7 +49,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txbTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddOrder = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmItemCount)).BeginInit();
@@ -174,6 +174,7 @@
             // 
             // btnPay
             // 
+            this.btnPay.Enabled = false;
             this.btnPay.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnPay.IconColor = System.Drawing.Color.Black;
@@ -185,6 +186,20 @@
             this.btnPay.Text = "Make payment";
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnAddOrder
+            // 
+            this.btnAddOrder.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOrder.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAddOrder.IconColor = System.Drawing.Color.Black;
+            this.btnAddOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddOrder.Location = new System.Drawing.Point(69, 3);
+            this.btnAddOrder.Name = "btnAddOrder";
+            this.btnAddOrder.Size = new System.Drawing.Size(123, 47);
+            this.btnAddOrder.TabIndex = 0;
+            this.btnAddOrder.Text = "Add order";
+            this.btnAddOrder.UseVisualStyleBackColor = true;
+            this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 
             // panel6
             // 
@@ -264,20 +279,6 @@
             this.label1.Size = new System.Drawing.Size(103, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total";
-            // 
-            // btnAddOrder
-            // 
-            this.btnAddOrder.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddOrder.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddOrder.IconColor = System.Drawing.Color.Black;
-            this.btnAddOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddOrder.Location = new System.Drawing.Point(69, 3);
-            this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(123, 47);
-            this.btnAddOrder.TabIndex = 0;
-            this.btnAddOrder.Text = "Add order";
-            this.btnAddOrder.UseVisualStyleBackColor = true;
-            this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 
             // fHome
             // 
