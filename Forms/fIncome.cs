@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iMart.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace iMart.Forms
         public fIncome()
         {
             InitializeComponent();
+        }
+
+        //Methods
+        void LoadListBillByDate(DateTime dateBegin, DateTime dateEnd)
+        {
+            dtvgBillManifest.DataSource = BillDAO.Instance.GetListBillByDate(dateBegin, dateEnd);
+            txbNumber.Text = BillDAO.Instance.GetNumberOfBill(dateBegin, dateEnd).ToString();
+            txbTotalTotal.Text = "$" + BillDAO.Instance.GetTotalOfTotal(dateBegin, dateEnd).ToString();
+        }
+
+        //Events
+        private void btnManifest_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
     }
 }

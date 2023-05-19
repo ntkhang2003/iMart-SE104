@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lbWelcome = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -240,6 +241,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.White;
+            this.panelDesktop.Controls.Add(this.lbWelcome);
             this.panelDesktop.Controls.Add(this.label2);
             this.panelDesktop.Controls.Add(this.label1);
             this.panelDesktop.Controls.Add(this.pictureBox1);
@@ -284,6 +286,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lbWelcome
+            // 
+            this.lbWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWelcome.AutoSize = true;
+            this.lbWelcome.BackColor = System.Drawing.Color.White;
+            this.lbWelcome.Font = new System.Drawing.Font("Comic Sans MS", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.lbWelcome.Location = new System.Drawing.Point(66, 59);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWelcome.Size = new System.Drawing.Size(215, 62);
+            this.lbWelcome.TabIndex = 4;
+            this.lbWelcome.Text = "Welcome";
+            this.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // fMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -324,6 +341,7 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnAccount;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lbWelcome;
     }
 }
 

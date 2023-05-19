@@ -10,9 +10,17 @@ namespace iMart.Forms
 {
     public partial class fHome : Form
     {
-        public fHome()
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
+        }
+        public fHome(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             this.AcceptButton = btnSearchItem;
             LoadProduct();
         }
@@ -92,6 +100,7 @@ namespace iMart.Forms
                 BillDAO.Instance.AddTotalPrice(idBill, Convert.ToDouble(txbTotal.Text.Remove(0, 1)));
                 txbTotal.Text = "$0";
                 btnPay.Enabled = false;
+                lsvBill.Items.Clear();
             }
         }
 
@@ -121,7 +130,8 @@ namespace iMart.Forms
 
         private void btnAddOrder_Click(object sender, EventArgs e)
         {
-            BillDAO.Instance.InsertBill();
+            lsvBill.Items.Clear();
+            BillDAO.Instance.InsertBill(LoginAccount.UserName);
             lsvBill.Visible = true;
             btnAddOrder.Enabled = false;
             btnPay.Enabled = true;
