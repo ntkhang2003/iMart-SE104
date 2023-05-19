@@ -182,7 +182,7 @@ BEGIN
 	ELSE
 	BEGIN
 		INSERT INTO dbo.BILLDETAIL(idBill, idProduct, quantity) VALUES (@idBill, @idProduct, @quantity)
-=======
+
 CREATE PROC USP_UpdateAccount
 @userName NVARCHAR(100), @displayname NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
 AS
@@ -199,7 +199,6 @@ BEGIN
 		END
 		ELSE
 			UPDATE dbo.ACCOUNT SET displayName = @displayname, passWord = @newPassword WHERE userName = @userName
->>>>>>> account
 	END
 END
 GO
