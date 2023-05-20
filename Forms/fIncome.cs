@@ -29,7 +29,14 @@ namespace iMart.Forms
         //Events
         private void btnManifest_Click(object sender, EventArgs e)
         {
-            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            if (dtpkFromDate.Value > dtpkToDate.Value)
+            {
+                MessageBox.Show("The Date is incorrect!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            }
         }
     }
 }
