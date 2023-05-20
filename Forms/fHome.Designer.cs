@@ -138,6 +138,7 @@
             // 
             // btnAddItem
             // 
+            this.btnAddItem.Enabled = false;
             this.btnAddItem.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddItem.IconColor = System.Drawing.Color.Black;
             this.btnAddItem.IconFont = FontAwesome.Sharp.IconFont.Auto;

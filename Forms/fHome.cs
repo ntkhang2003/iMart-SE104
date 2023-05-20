@@ -101,31 +101,25 @@ namespace iMart.Forms
                 txbTotal.Text = "$0";
                 btnPay.Enabled = false;
                 lsvBill.Items.Clear();
+                btnAddItem.Enabled = false;
             }
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            if (lsvBill.Visible)
+            int idBill = BillDAO.Instance.GetMaxIDBill();
+            if (txbItemName.Text != "")
             {
-                int idBill = BillDAO.Instance.GetMaxIDBill();
-                if (txbItemName.Text != "")
-                {
-                    int idProduct = ProductDAO.Instance.GetIDProductByName(txbItemName.Text);
-                    int quantity = (int)nmItemCount.Value;
-                    BillDetailDAO.Instance.InsertBillDetail(idBill, idProduct, quantity);
-                    ShowBill(idBill);
-                    nmItemCount.Value = 1;
-                }
-                else
-                {
-                    MessageBox.Show("You must choose item before adding!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                int idProduct = ProductDAO.Instance.GetIDProductByName(txbItemName.Text);
+                int quantity = (int)nmItemCount.Value;
+                BillDetailDAO.Instance.InsertBillDetail(idBill, idProduct, quantity);
+                ShowBill(idBill);
+                nmItemCount.Value = 1;
             }
             else
             {
-                MessageBox.Show("You must create order before adding item!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MessageBox.Show("You must choose item before adding!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
 
         private void btnAddOrder_Click(object sender, EventArgs e)
@@ -133,6 +127,7 @@ namespace iMart.Forms
             lsvBill.Items.Clear();
             BillDAO.Instance.InsertBill(LoginAccount.UserName);
             lsvBill.Visible = true;
+            btnAddItem.Enabled = true;
             btnAddOrder.Enabled = false;
             btnPay.Enabled = true;
         }
