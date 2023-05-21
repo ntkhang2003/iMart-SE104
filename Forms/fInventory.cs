@@ -50,7 +50,11 @@ namespace iMart.Forms
             double price = (double)nmProductPrice.Value;
             string supplierName = (cbSupplier.SelectedItem as Supplier).Name ;
             int idSupplier = SupplierDAO.Instance.GetIDSupplierByName(supplierName);
-            if (ProductDAO.Instance.InsertProduct(productName, price, idSupplier))
+            if (ProductDAO.Instance.GetIDProductByName(productName) != 0)
+            {
+                MessageBox.Show("The product is already existed");
+            }
+            else if (ProductDAO.Instance.InsertProduct(productName, price, idSupplier))
             {
                 MessageBox.Show("Add product successfully!");
                 LoadProductList();
