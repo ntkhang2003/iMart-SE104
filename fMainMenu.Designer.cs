@@ -39,11 +39,11 @@
             this.labelLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.lbWelcome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lbWelcome = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -102,7 +102,7 @@
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.IconSize = 36;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 555);
+            this.btnLogout.Location = new System.Drawing.Point(0, 577);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(160, 62);
@@ -251,6 +251,21 @@
             this.panelDesktop.Size = new System.Drawing.Size(950, 651);
             this.panelDesktop.TabIndex = 1;
             // 
+            // lbWelcome
+            // 
+            this.lbWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWelcome.AutoSize = true;
+            this.lbWelcome.BackColor = System.Drawing.Color.White;
+            this.lbWelcome.Font = new System.Drawing.Font("Comic Sans MS", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.lbWelcome.Location = new System.Drawing.Point(66, 59);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbWelcome.Size = new System.Drawing.Size(210, 61);
+            this.lbWelcome.TabIndex = 4;
+            this.lbWelcome.Text = "Welcome";
+            this.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -285,21 +300,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbWelcome
-            // 
-            this.lbWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbWelcome.AutoSize = true;
-            this.lbWelcome.BackColor = System.Drawing.Color.White;
-            this.lbWelcome.Font = new System.Drawing.Font("Comic Sans MS", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.lbWelcome.Location = new System.Drawing.Point(66, 59);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbWelcome.Size = new System.Drawing.Size(215, 62);
-            this.lbWelcome.TabIndex = 4;
-            this.lbWelcome.Text = "Welcome";
-            this.lbWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // fMainMenu
             // 

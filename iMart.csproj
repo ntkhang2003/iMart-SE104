@@ -75,11 +75,13 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\SupplierDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillDetail.cs" />
     <Compile Include="DTO\Menu.cs" />
     <Compile Include="DTO\Product.cs" />
+    <Compile Include="DTO\Supplier.cs" />
     <Compile Include="DTO\Temp.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>

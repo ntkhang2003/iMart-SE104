@@ -104,7 +104,7 @@
             this.flpItem.AutoScroll = true;
             this.flpItem.Location = new System.Drawing.Point(12, 63);
             this.flpItem.Name = "flpItem";
-            this.flpItem.Size = new System.Drawing.Size(522, 541);
+            this.flpItem.Size = new System.Drawing.Size(522, 578);
             this.flpItem.TabIndex = 4;
             // 
             // panel1
@@ -168,7 +168,7 @@
             // 
             this.panel3.Controls.Add(this.btnPay);
             this.panel3.Controls.Add(this.btnAddOrder);
-            this.panel3.Location = new System.Drawing.Point(540, 551);
+            this.panel3.Location = new System.Drawing.Point(540, 588);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 53);
             this.panel3.TabIndex = 3;
@@ -207,7 +207,7 @@
             this.panel6.Controls.Add(this.lsvBill);
             this.panel6.Location = new System.Drawing.Point(540, 63);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(380, 423);
+            this.panel6.Size = new System.Drawing.Size(380, 460);
             this.panel6.TabIndex = 4;
             // 
             // lsvBill
@@ -221,7 +221,7 @@
             this.lsvBill.HideSelection = false;
             this.lsvBill.Location = new System.Drawing.Point(0, 0);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(380, 423);
+            this.lsvBill.Size = new System.Drawing.Size(380, 460);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -251,7 +251,7 @@
             // 
             this.panel5.Controls.Add(this.txbTotal);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(540, 492);
+            this.panel5.Location = new System.Drawing.Point(540, 529);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(380, 53);
             this.panel5.TabIndex = 4;
@@ -285,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 616);
+            this.ClientSize = new System.Drawing.Size(932, 653);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
