@@ -18,5 +18,10 @@ namespace iMart.Forms
         {
             InitializeComponent();
         }
+
+        private void fEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
