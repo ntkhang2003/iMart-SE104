@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.dtvgBillManifest);
             this.panel1.Location = new System.Drawing.Point(12, 165);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(908, 350);
+            this.panel1.Size = new System.Drawing.Size(908, 386);
             this.panel1.TabIndex = 0;
             // 
             // dtvgBillManifest
@@ -68,7 +68,7 @@
             this.dtvgBillManifest.ReadOnly = true;
             this.dtvgBillManifest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dtvgBillManifest.RowTemplate.Height = 24;
-            this.dtvgBillManifest.Size = new System.Drawing.Size(782, 308);
+            this.dtvgBillManifest.Size = new System.Drawing.Size(782, 346);
             this.dtvgBillManifest.TabIndex = 0;
             // 
             // panel2
@@ -112,18 +112,20 @@
             // 
             this.dtpkToDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpkToDate.Location = new System.Drawing.Point(567, 14);
             this.dtpkToDate.Name = "dtpkToDate";
-            this.dtpkToDate.Size = new System.Drawing.Size(338, 30);
+            this.dtpkToDate.Size = new System.Drawing.Size(147, 30);
             this.dtpkToDate.TabIndex = 3;
             // 
             // dtpkFromDate
             // 
             this.dtpkFromDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkFromDate.Location = new System.Drawing.Point(112, 14);
+            this.dtpkFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkFromDate.Location = new System.Drawing.Point(302, 14);
             this.dtpkFromDate.Name = "dtpkFromDate";
-            this.dtpkFromDate.Size = new System.Drawing.Size(340, 30);
+            this.dtpkFromDate.Size = new System.Drawing.Size(159, 30);
             this.dtpkFromDate.TabIndex = 2;
             // 
             // label2
@@ -140,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(185, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 47);
             this.label1.TabIndex = 0;
@@ -152,7 +154,7 @@
             this.panel3.Controls.Add(this.txbTotalTotal);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(12, 521);
+            this.panel3.Location = new System.Drawing.Point(12, 557);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(905, 84);
             this.panel3.TabIndex = 2;
@@ -209,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 616);
+            this.ClientSize = new System.Drawing.Size(932, 653);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

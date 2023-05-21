@@ -57,5 +57,27 @@ namespace iMart.DAO
 
             return (int)data.Rows[0]["idProduct"];
         }
+
+        public bool InsertProduct(string productName, double price, int idSupplier)
+        {
+            string query = string.Format("INSERT INTO dbo.PRODUCT (productName, price, idSupplier) VALUES (N'{0}', {1}, {2})", productName, price, idSupplier);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool UpdateProduct(int idProduct, string productName, double price, int idSupplier)
+        {
+            string query = string.Format("UPDATE dbo.PRODUCT SET productName = N'{0}', price = {1}, idSupplier = {2} WHERE idProduct = {3}", productName, price, idSupplier, idProduct);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool DeleteProduct(int idProduct)
+        {
+            BillDetailDAO.Instance.DeleteBillDetailByProductID(idProduct);
+            string query = string.Format("DELETE FROM dbo.PRODUCT WHERE idProduct = {0}", idProduct);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
