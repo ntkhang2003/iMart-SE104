@@ -119,6 +119,18 @@ INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('ReaLemon', FORM
 INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Monster Munch', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
 INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Chocodile Twinkie', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
 INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Kettle Foods', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Swiss cheese', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('vanilla ice cream', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('gooseberry', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('apricot pits', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('maple syrup', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('kidney beans', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mushroom sauce', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('whole pepper', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mint drops', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('bonbons', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('lollipop', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
+
 GO
 
 SELECT * FROM dbo.PRODUCT
@@ -134,9 +146,6 @@ CREATE PROC USP_GetProductList
 AS 
 	SELECT idProduct, productName, price, supplierName
 	FROM dbo.PRODUCT JOIN dbo.SUPPLIER ON dbo.PRODUCT.idSupplier = dbo.SUPPLIER.idSupplier
-GO
-
-EXEC dbo.USP_GetProductList
 GO
 
 --Bill operation

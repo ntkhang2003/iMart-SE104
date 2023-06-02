@@ -37,5 +37,10 @@ namespace iMart.DAO
         {
             DataProvider.Instance.ExecuteNonQuery("USP_InsertBillDetail @idBill , @idProduct , @quantity", new object[] { idBill, idProduct, quantity });
         }
+
+        public void DeleteBillDetailByProductID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("DELETE FROM dbo.BILLDETAIL WHERE idProduct = " + id);
+        }
     }
 }
