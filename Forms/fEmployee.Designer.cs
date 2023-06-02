@@ -31,6 +31,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnResetPassword = new FontAwesome.Sharp.IconButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
@@ -47,9 +48,9 @@
             this.btnEditAccount = new FontAwesome.Sharp.IconButton();
             this.btnDeleteAccount = new FontAwesome.Sharp.IconButton();
             this.btnAddAccount = new FontAwesome.Sharp.IconButton();
-            this.txtAccountType = new System.Windows.Forms.TextBox();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flpItem.SuspendLayout();
@@ -84,15 +85,29 @@
             this.btnResetPassword.TabIndex = 16;
             this.btnResetPassword.Text = "Reset Password";
             this.btnResetPassword.UseVisualStyleBackColor = false;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.txtAccountType);
+            this.panel7.Controls.Add(this.numericUpDown2);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Location = new System.Drawing.Point(3, 139);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(383, 62);
             this.panel7.TabIndex = 4;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(152, 16);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(58, 30);
+            this.numericUpDown2.TabIndex = 17;
             // 
             // label3
             // 
@@ -239,6 +254,7 @@
             this.btnEditAccount.TabIndex = 14;
             this.btnEditAccount.Text = "Edit";
             this.btnEditAccount.UseVisualStyleBackColor = false;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // btnDeleteAccount
             // 
@@ -256,6 +272,7 @@
             this.btnDeleteAccount.TabIndex = 13;
             this.btnDeleteAccount.Text = "Delete";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // btnAddAccount
             // 
@@ -273,14 +290,7 @@
             this.btnAddAccount.TabIndex = 12;
             this.btnAddAccount.Text = "Add";
             this.btnAddAccount.UseVisualStyleBackColor = false;
-            // 
-            // txtAccountType
-            // 
-            this.txtAccountType.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccountType.Location = new System.Drawing.Point(152, 16);
-            this.txtAccountType.Name = "txtAccountType";
-            this.txtAccountType.Size = new System.Drawing.Size(226, 30);
-            this.txtAccountType.TabIndex = 2;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
             // fEmployee
             // 
@@ -297,6 +307,7 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -329,6 +340,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnResetPassword;
-        private System.Windows.Forms.TextBox txtAccountType;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }

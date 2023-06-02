@@ -52,5 +52,38 @@ namespace iMart.DAO
 
             return null;
         }
+
+        public bool InsertAccount(string name, string displayName, int type)
+        {
+            string query = string.Format("INSERT  dbo.ACCOUNT ( UserName, DisplayName, accountType )VALUES ( N'{0}', N'{1}', {2})", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateAccount(string name, string displayName, int type)
+        {
+            string query = string.Format("UPDATE dbo.ACCOUNT SET DisplayName = N'{1}', accountType = {2} WHERE Username = N'{0}'", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool DeleteAccount(string name)
+        {
+
+            string query = string.Format("DELETE ACCOUNT WHERE UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool ResetPassword(string name)
+        {
+            string query = string.Format("UPDATE ACCOUNT SET password = N'0' WHERE UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
