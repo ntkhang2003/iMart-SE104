@@ -120,7 +120,9 @@ namespace iMart
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new fEmployee());
+            fEmployee f = new fEmployee();
+            f.loginAccount = LoginAccount;
+            OpenChildForm(f);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
