@@ -67,7 +67,7 @@
             this.panel6.Location = new System.Drawing.Point(531, 63);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(389, 541);
-            this.panel6.TabIndex = 10;
+            this.panel6.TabIndex = 1;
             // 
             // btnResetPassword
             // 
@@ -82,7 +82,7 @@
             this.btnResetPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(183, 42);
-            this.btnResetPassword.TabIndex = 16;
+            this.btnResetPassword.TabIndex = 0;
             this.btnResetPassword.Text = "Reset Password";
             this.btnResetPassword.UseVisualStyleBackColor = false;
             this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
@@ -94,7 +94,7 @@
             this.panel7.Location = new System.Drawing.Point(3, 139);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(383, 62);
-            this.panel7.TabIndex = 4;
+            this.panel7.TabIndex = 3;
             // 
             // numericUpDown2
             // 
@@ -107,7 +107,7 @@
             0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(58, 30);
-            this.numericUpDown2.TabIndex = 17;
+            this.numericUpDown2.TabIndex = 0;
             // 
             // label3
             // 
@@ -116,7 +116,7 @@
             this.label3.Location = new System.Drawing.Point(3, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 24);
-            this.label3.TabIndex = 1;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Account type:";
             // 
             // panel3
@@ -126,7 +126,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 71);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(383, 62);
-            this.panel3.TabIndex = 4;
+            this.panel3.TabIndex = 2;
             // 
             // txtDisplayName
             // 
@@ -153,7 +153,7 @@
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(383, 62);
-            this.panel5.TabIndex = 3;
+            this.panel5.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -161,7 +161,7 @@
             this.txtUsername.Location = new System.Drawing.Point(152, 16);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(226, 30);
-            this.txtUsername.TabIndex = 0;
+            this.txtUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -170,7 +170,7 @@
             this.label1.Location = new System.Drawing.Point(3, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 24);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
             // flpItem
@@ -198,7 +198,7 @@
             this.panel1.Location = new System.Drawing.Point(531, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 45);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -233,7 +233,7 @@
             this.btnShowAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowAccount.Name = "btnShowAccount";
             this.btnShowAccount.Size = new System.Drawing.Size(125, 45);
-            this.btnShowAccount.TabIndex = 15;
+            this.btnShowAccount.TabIndex = 0;
             this.btnShowAccount.Text = "View";
             this.btnShowAccount.UseVisualStyleBackColor = false;
             this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
