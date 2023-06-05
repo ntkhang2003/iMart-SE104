@@ -255,7 +255,10 @@
             // 
             // btnDeleteInven
             // 
-            this.btnDeleteInven.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteInven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnDeleteInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteInven.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteInven.ForeColor = System.Drawing.Color.White;
             this.btnDeleteInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDeleteInven.IconColor = System.Drawing.Color.Black;
             this.btnDeleteInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -264,12 +267,15 @@
             this.btnDeleteInven.Size = new System.Drawing.Size(123, 47);
             this.btnDeleteInven.TabIndex = 7;
             this.btnDeleteInven.Text = "Delete";
-            this.btnDeleteInven.UseVisualStyleBackColor = true;
+            this.btnDeleteInven.UseVisualStyleBackColor = false;
             this.btnDeleteInven.Click += new System.EventHandler(this.btnDeleteInven_Click);
             // 
             // btnUpdateInven
             // 
-            this.btnUpdateInven.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateInven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnUpdateInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateInven.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateInven.ForeColor = System.Drawing.Color.White;
             this.btnUpdateInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUpdateInven.IconColor = System.Drawing.Color.Black;
             this.btnUpdateInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -278,12 +284,15 @@
             this.btnUpdateInven.Size = new System.Drawing.Size(123, 47);
             this.btnUpdateInven.TabIndex = 6;
             this.btnUpdateInven.Text = "Update";
-            this.btnUpdateInven.UseVisualStyleBackColor = true;
+            this.btnUpdateInven.UseVisualStyleBackColor = false;
             this.btnUpdateInven.Click += new System.EventHandler(this.btnUpdateInven_Click);
             // 
             // btnReadInven
             // 
-            this.btnReadInven.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadInven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnReadInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReadInven.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReadInven.ForeColor = System.Drawing.Color.White;
             this.btnReadInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnReadInven.IconColor = System.Drawing.Color.Black;
             this.btnReadInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -292,12 +301,15 @@
             this.btnReadInven.Size = new System.Drawing.Size(123, 47);
             this.btnReadInven.TabIndex = 5;
             this.btnReadInven.Text = "Read";
-            this.btnReadInven.UseVisualStyleBackColor = true;
+            this.btnReadInven.UseVisualStyleBackColor = false;
             this.btnReadInven.Click += new System.EventHandler(this.btnReadInven_Click);
             // 
             // btnCreateInven
             // 
-            this.btnCreateInven.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateInven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnCreateInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateInven.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateInven.ForeColor = System.Drawing.Color.White;
             this.btnCreateInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCreateInven.IconColor = System.Drawing.Color.Black;
             this.btnCreateInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -306,7 +318,7 @@
             this.btnCreateInven.Size = new System.Drawing.Size(123, 47);
             this.btnCreateInven.TabIndex = 4;
             this.btnCreateInven.Text = "Create";
-            this.btnCreateInven.UseVisualStyleBackColor = true;
+            this.btnCreateInven.UseVisualStyleBackColor = false;
             this.btnCreateInven.Click += new System.EventHandler(this.btnCreateInven_Click);
             // 
             // fInventory

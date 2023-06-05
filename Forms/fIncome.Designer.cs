@@ -86,7 +86,10 @@
             // 
             // btnManifest
             // 
-            this.btnManifest.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManifest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnManifest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManifest.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManifest.ForeColor = System.Drawing.Color.White;
             this.btnManifest.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnManifest.IconColor = System.Drawing.Color.Black;
             this.btnManifest.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -95,7 +98,7 @@
             this.btnManifest.Size = new System.Drawing.Size(123, 47);
             this.btnManifest.TabIndex = 2;
             this.btnManifest.Text = "Manifest";
-            this.btnManifest.UseVisualStyleBackColor = true;
+            this.btnManifest.UseVisualStyleBackColor = false;
             this.btnManifest.Click += new System.EventHandler(this.btnManifest_Click);
             // 
             // label3

@@ -64,24 +64,25 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.panel5);
-            this.panel6.Location = new System.Drawing.Point(531, 63);
+            this.panel6.Location = new System.Drawing.Point(534, 63);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(389, 541);
+            this.panel6.Size = new System.Drawing.Size(386, 541);
             this.panel6.TabIndex = 1;
             // 
             // btnResetPassword
             // 
             this.btnResetPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.btnResetPassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetPassword.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPassword.ForeColor = System.Drawing.Color.White;
             this.btnResetPassword.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnResetPassword.IconColor = System.Drawing.Color.Black;
             this.btnResetPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnResetPassword.Location = new System.Drawing.Point(198, 213);
+            this.btnResetPassword.Location = new System.Drawing.Point(155, 213);
             this.btnResetPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(183, 42);
+            this.btnResetPassword.Size = new System.Drawing.Size(225, 47);
             this.btnResetPassword.TabIndex = 0;
             this.btnResetPassword.Text = "Reset Password";
             this.btnResetPassword.UseVisualStyleBackColor = false;
@@ -177,9 +178,9 @@
             // 
             this.flpItem.AutoScroll = true;
             this.flpItem.Controls.Add(this.dtgvAccount);
-            this.flpItem.Location = new System.Drawing.Point(12, 63);
+            this.flpItem.Location = new System.Drawing.Point(12, 72);
             this.flpItem.Name = "flpItem";
-            this.flpItem.Size = new System.Drawing.Size(513, 541);
+            this.flpItem.Size = new System.Drawing.Size(519, 508);
             this.flpItem.TabIndex = 11;
             // 
             // dtgvAccount
@@ -190,14 +191,14 @@
             this.dtgvAccount.Name = "dtgvAccount";
             this.dtgvAccount.RowHeadersWidth = 51;
             this.dtgvAccount.RowTemplate.Height = 24;
-            this.dtgvAccount.Size = new System.Drawing.Size(497, 525);
+            this.dtgvAccount.Size = new System.Drawing.Size(513, 481);
             this.dtgvAccount.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(531, 12);
+            this.panel1.Location = new System.Drawing.Point(534, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 45);
+            this.panel1.Size = new System.Drawing.Size(386, 45);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -217,22 +218,23 @@
             this.panel2.Controls.Add(this.btnAddAccount);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(513, 45);
+            this.panel2.Size = new System.Drawing.Size(513, 54);
             this.panel2.TabIndex = 5;
             // 
             // btnShowAccount
             // 
             this.btnShowAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.btnShowAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAccount.ForeColor = System.Drawing.Color.White;
             this.btnShowAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnShowAccount.IconColor = System.Drawing.Color.Black;
             this.btnShowAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnShowAccount.Location = new System.Drawing.Point(375, 0);
+            this.btnShowAccount.Location = new System.Drawing.Point(396, 5);
             this.btnShowAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowAccount.Name = "btnShowAccount";
-            this.btnShowAccount.Size = new System.Drawing.Size(125, 45);
+            this.btnShowAccount.Size = new System.Drawing.Size(123, 47);
             this.btnShowAccount.TabIndex = 0;
             this.btnShowAccount.Text = "View";
             this.btnShowAccount.UseVisualStyleBackColor = false;
@@ -242,15 +244,16 @@
             // 
             this.btnEditAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.btnEditAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditAccount.ForeColor = System.Drawing.Color.White;
             this.btnEditAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEditAccount.IconColor = System.Drawing.Color.Black;
             this.btnEditAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditAccount.Location = new System.Drawing.Point(250, 0);
+            this.btnEditAccount.Location = new System.Drawing.Point(264, 5);
             this.btnEditAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnEditAccount.Name = "btnEditAccount";
-            this.btnEditAccount.Size = new System.Drawing.Size(125, 45);
+            this.btnEditAccount.Size = new System.Drawing.Size(123, 47);
             this.btnEditAccount.TabIndex = 14;
             this.btnEditAccount.Text = "Edit";
             this.btnEditAccount.UseVisualStyleBackColor = false;
@@ -260,15 +263,16 @@
             // 
             this.btnDeleteAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDeleteAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.btnDeleteAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDeleteAccount.IconColor = System.Drawing.Color.Black;
             this.btnDeleteAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(125, 0);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(132, 5);
             this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(125, 45);
+            this.btnDeleteAccount.Size = new System.Drawing.Size(123, 47);
             this.btnDeleteAccount.TabIndex = 13;
             this.btnDeleteAccount.Text = "Delete";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
@@ -278,15 +282,16 @@
             // 
             this.btnAddAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
-            this.btnAddAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAccount.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAccount.ForeColor = System.Drawing.Color.White;
             this.btnAddAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddAccount.IconColor = System.Drawing.Color.Black;
             this.btnAddAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddAccount.Location = new System.Drawing.Point(3, 0);
+            this.btnAddAccount.Location = new System.Drawing.Point(0, 5);
             this.btnAddAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(125, 45);
+            this.btnAddAccount.Size = new System.Drawing.Size(123, 47);
             this.btnAddAccount.TabIndex = 12;
             this.btnAddAccount.Text = "Add";
             this.btnAddAccount.UseVisualStyleBackColor = false;

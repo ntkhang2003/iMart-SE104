@@ -175,8 +175,11 @@
             // 
             // btnPay
             // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
             this.btnPay.Enabled = false;
-            this.btnPay.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnPay.IconColor = System.Drawing.Color.Black;
             this.btnPay.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -185,12 +188,15 @@
             this.btnPay.Size = new System.Drawing.Size(123, 47);
             this.btnPay.TabIndex = 1;
             this.btnPay.Text = "Make payment";
-            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnAddOrder
             // 
-            this.btnAddOrder.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnAddOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddOrder.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOrder.ForeColor = System.Drawing.Color.White;
             this.btnAddOrder.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddOrder.IconColor = System.Drawing.Color.Black;
             this.btnAddOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -199,7 +205,7 @@
             this.btnAddOrder.Size = new System.Drawing.Size(123, 47);
             this.btnAddOrder.TabIndex = 0;
             this.btnAddOrder.Text = "Add order";
-            this.btnAddOrder.UseVisualStyleBackColor = true;
+            this.btnAddOrder.UseVisualStyleBackColor = false;
             this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 
             // panel6

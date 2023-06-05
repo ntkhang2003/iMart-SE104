@@ -29,7 +29,7 @@ namespace iMart.Forms
         //Events
         private void btnManifest_Click(object sender, EventArgs e)
         {
-            if (dtpkToDate.Value < dtpkFromDate.Value)
+            if (dtpkToDate.Value <= dtpkFromDate.Value)
             {
                 MessageBox.Show("Incorrect date", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
