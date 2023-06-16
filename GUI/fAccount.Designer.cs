@@ -64,10 +64,11 @@
             // 
             // txtReEnterPass
             // 
-            this.txtReEnterPass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReEnterPass.Location = new System.Drawing.Point(253, 16);
+            this.txtReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReEnterPass.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReEnterPass.Location = new System.Drawing.Point(253, 13);
             this.txtReEnterPass.Name = "txtReEnterPass";
-            this.txtReEnterPass.Size = new System.Drawing.Size(318, 30);
+            this.txtReEnterPass.Size = new System.Drawing.Size(318, 38);
             this.txtReEnterPass.TabIndex = 1;
             this.txtReEnterPass.UseSystemPasswordChar = true;
             // 
@@ -77,9 +78,9 @@
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(20, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 32);
+            this.label4.Size = new System.Drawing.Size(226, 32);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Re-enter password:";
+            this.label4.Text = "Re-enter password";
             // 
             // panel4
             // 
@@ -92,10 +93,11 @@
             // 
             // txtNewPass
             // 
-            this.txtNewPass.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPass.Location = new System.Drawing.Point(253, 16);
+            this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPass.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(253, 13);
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(318, 30);
+            this.txtNewPass.Size = new System.Drawing.Size(318, 38);
             this.txtNewPass.TabIndex = 0;
             this.txtNewPass.UseSystemPasswordChar = true;
             // 
@@ -105,9 +107,9 @@
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(20, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 32);
+            this.label3.Size = new System.Drawing.Size(172, 32);
             this.label3.TabIndex = 1;
-            this.label3.Text = "New password:";
+            this.label3.Text = "New password";
             // 
             // panel3
             // 
@@ -120,10 +122,11 @@
             // 
             // txtPassWord
             // 
-            this.txtPassWord.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(253, 16);
+            this.txtPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassWord.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWord.Location = new System.Drawing.Point(253, 13);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(318, 30);
+            this.txtPassWord.Size = new System.Drawing.Size(318, 38);
             this.txtPassWord.TabIndex = 1;
             this.txtPassWord.UseSystemPasswordChar = true;
             // 
@@ -133,9 +136,9 @@
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 32);
+            this.label2.Size = new System.Drawing.Size(114, 32);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Password:";
+            this.label2.Text = "Password";
             // 
             // panel2
             // 
@@ -148,10 +151,11 @@
             // 
             // txtDisplayName
             // 
-            this.txtDisplayName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplayName.Location = new System.Drawing.Point(253, 16);
+            this.txtDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDisplayName.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Location = new System.Drawing.Point(253, 13);
             this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(318, 30);
+            this.txtDisplayName.Size = new System.Drawing.Size(318, 38);
             this.txtDisplayName.TabIndex = 0;
             // 
             // label1
@@ -160,9 +164,9 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 32);
+            this.label1.Size = new System.Drawing.Size(158, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Display name:";
+            this.label1.Text = "Display name";
             // 
             // panel1
             // 
@@ -175,11 +179,12 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(253, 16);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(253, 13);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(318, 30);
+            this.txtUsername.Size = new System.Drawing.Size(318, 38);
             this.txtUsername.TabIndex = 1;
             // 
             // lbUsername
@@ -188,9 +193,9 @@
             this.lbUsername.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsername.Location = new System.Drawing.Point(20, 13);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(132, 32);
+            this.lbUsername.Size = new System.Drawing.Size(122, 32);
             this.lbUsername.TabIndex = 1;
-            this.lbUsername.Text = "Username:";
+            this.lbUsername.Text = "Username";
             // 
             // panel6
             // 

@@ -48,6 +48,8 @@
             this.btnEditAccount = new FontAwesome.Sharp.IconButton();
             this.btnDeleteAccount = new FontAwesome.Sharp.IconButton();
             this.btnAddAccount = new FontAwesome.Sharp.IconButton();
+            this.txbSearchEmployee = new System.Windows.Forms.TextBox();
+            this.btnSearchEmployee = new FontAwesome.Sharp.IconButton();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -55,6 +57,7 @@
             this.panel5.SuspendLayout();
             this.flpItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +67,9 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.panel5);
-            this.panel6.Location = new System.Drawing.Point(534, 63);
+            this.panel6.Location = new System.Drawing.Point(534, 72);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(386, 541);
+            this.panel6.Size = new System.Drawing.Size(386, 532);
             this.panel6.TabIndex = 1;
             // 
             // btnResetPassword
@@ -79,10 +82,10 @@
             this.btnResetPassword.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnResetPassword.IconColor = System.Drawing.Color.Black;
             this.btnResetPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnResetPassword.Location = new System.Drawing.Point(155, 213);
+            this.btnResetPassword.Location = new System.Drawing.Point(154, 200);
             this.btnResetPassword.Margin = new System.Windows.Forms.Padding(0);
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(225, 47);
+            this.btnResetPassword.Size = new System.Drawing.Size(226, 47);
             this.btnResetPassword.TabIndex = 0;
             this.btnResetPassword.Text = "Reset Password";
             this.btnResetPassword.UseVisualStyleBackColor = false;
@@ -99,26 +102,27 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(152, 16);
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(161, 9);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(58, 30);
+            this.numericUpDown2.Size = new System.Drawing.Size(216, 41);
             this.numericUpDown2.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 19);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 24);
+            this.label3.Size = new System.Drawing.Size(161, 32);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Account type:";
+            this.label3.Text = "Account type";
             // 
             // panel3
             // 
@@ -131,21 +135,22 @@
             // 
             // txtDisplayName
             // 
-            this.txtDisplayName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplayName.Location = new System.Drawing.Point(152, 16);
+            this.txtDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDisplayName.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Location = new System.Drawing.Point(161, 8);
             this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(226, 30);
+            this.txtDisplayName.Size = new System.Drawing.Size(216, 38);
             this.txtDisplayName.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 19);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-3, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 24);
+            this.label2.Size = new System.Drawing.Size(158, 32);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Display name:";
+            this.label2.Text = "Display name";
             // 
             // panel5
             // 
@@ -158,21 +163,22 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(152, 16);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(161, 9);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(226, 30);
+            this.txtUsername.Size = new System.Drawing.Size(216, 38);
             this.txtUsername.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 24);
+            this.label1.Size = new System.Drawing.Size(122, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username:";
+            this.label1.Text = "Username";
             // 
             // flpItem
             // 
@@ -180,7 +186,7 @@
             this.flpItem.Controls.Add(this.dtgvAccount);
             this.flpItem.Location = new System.Drawing.Point(12, 72);
             this.flpItem.Name = "flpItem";
-            this.flpItem.Size = new System.Drawing.Size(519, 508);
+            this.flpItem.Size = new System.Drawing.Size(519, 532);
             this.flpItem.TabIndex = 11;
             // 
             // dtgvAccount
@@ -191,14 +197,16 @@
             this.dtgvAccount.Name = "dtgvAccount";
             this.dtgvAccount.RowHeadersWidth = 51;
             this.dtgvAccount.RowTemplate.Height = 24;
-            this.dtgvAccount.Size = new System.Drawing.Size(513, 481);
+            this.dtgvAccount.Size = new System.Drawing.Size(513, 515);
             this.dtgvAccount.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSearchEmployee);
+            this.panel1.Controls.Add(this.txbSearchEmployee);
             this.panel1.Location = new System.Drawing.Point(534, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 45);
+            this.panel1.Size = new System.Drawing.Size(386, 52);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -297,6 +305,29 @@
             this.btnAddAccount.UseVisualStyleBackColor = false;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
+            // txbSearchEmployee
+            // 
+            this.txbSearchEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSearchEmployee.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearchEmployee.Location = new System.Drawing.Point(73, 7);
+            this.txbSearchEmployee.Multiline = true;
+            this.txbSearchEmployee.Name = "txbSearchEmployee";
+            this.txbSearchEmployee.Size = new System.Drawing.Size(192, 36);
+            this.txbSearchEmployee.TabIndex = 2;
+            this.txbSearchEmployee.WordWrap = false;
+            // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearchEmployee.IconColor = System.Drawing.Color.Black;
+            this.btnSearchEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearchEmployee.IconSize = 36;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(271, 5);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(59, 42);
+            this.btnSearchEmployee.TabIndex = 3;
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            // 
             // fEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -319,6 +350,8 @@
             this.panel5.PerformLayout();
             this.flpItem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -346,5 +379,7 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnResetPassword;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.TextBox txbSearchEmployee;
+        private FontAwesome.Sharp.IconButton btnSearchEmployee;
     }
 }

@@ -215,3 +215,5 @@ END
 GO
 
 SELECT idProduct FROM dbo.PRODUCT WHERE productName = 'a'
+
+SELECT SUM(totalPrice) FROM dbo.BILL WHERE billDate >= '5/6/2023' AND billDate <= '5/6/2023'
