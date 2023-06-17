@@ -42,7 +42,27 @@ namespace iMart.DAO
 
         public bool UpdateAccount (string userName, string displayName, string pass, string newPass)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayname , @password , @newPassword", new object[] { userName, displayName, pass, newPass });
+            byte[] temp01 = ASCIIEncoding.ASCII.GetBytes(pass);
+            byte[] hasData01 = new MD5CryptoServiceProvider().ComputeHash(temp01);
+
+            string hasPass = "";
+
+            foreach (byte item in hasData01)
+            {
+                hasPass += item;
+            }
+
+            byte[] temp02 = ASCIIEncoding.ASCII.GetBytes(newPass);
+            byte[] hasData02 = new MD5CryptoServiceProvider().ComputeHash(temp02);
+
+            string hasNewPass = "";
+
+            foreach (byte item in hasData02)
+            {
+                hasNewPass += item;
+            }
+
+            int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayname , @password , @newPassword", new object[] { userName, displayName, hasPass, hasNewPass });
 
             return result > 0;
         }
