@@ -140,7 +140,8 @@ namespace iMart
 
         private void picLogo_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            if (currentChildForm != null)
+                currentChildForm.Close();
             DisableButton();
             leftBorderBtn.Visible = false;
         }
