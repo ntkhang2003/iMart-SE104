@@ -122,7 +122,7 @@ namespace iMart.Forms
         private void btnAddOrder_Click(object sender, EventArgs e)
         {
             lsvBill.Items.Clear();
-            BillDAO.Instance.InsertBill(LoginAccount.UserName);
+            BillDAO.Instance.InsertBill(LoginAccount.DisplayName);
             lsvBill.Visible = true;
             btnAddItem.Enabled = true;
             btnAddOrder.Enabled = false;

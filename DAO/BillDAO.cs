@@ -17,9 +17,9 @@ namespace iMart.DAO
         }
         private BillDAO() { }
 
-        public void InsertBill(string userName)
+        public void InsertBill(string displayName)
         {
-            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill @userName ", new object[] { userName });
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill @cashierName ", new object[] { displayName });
         }
         public int GetMaxIDBill()
         {

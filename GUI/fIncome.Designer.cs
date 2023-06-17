@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtvgBillManifest = new System.Windows.Forms.DataGridView();
+            this.dtgvBillManifest = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnManifest = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,33 +43,33 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvgBillManifest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBillManifest)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dtvgBillManifest);
+            this.panel1.Controls.Add(this.dtgvBillManifest);
             this.panel1.Location = new System.Drawing.Point(12, 165);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 386);
             this.panel1.TabIndex = 0;
             // 
-            // dtvgBillManifest
+            // dtgvBillManifest
             // 
-            this.dtvgBillManifest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtvgBillManifest.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtvgBillManifest.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dtvgBillManifest.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtvgBillManifest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvgBillManifest.Location = new System.Drawing.Point(57, 20);
-            this.dtvgBillManifest.Name = "dtvgBillManifest";
-            this.dtvgBillManifest.ReadOnly = true;
-            this.dtvgBillManifest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dtvgBillManifest.RowTemplate.Height = 24;
-            this.dtvgBillManifest.Size = new System.Drawing.Size(782, 346);
-            this.dtvgBillManifest.TabIndex = 0;
+            this.dtgvBillManifest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvBillManifest.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgvBillManifest.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvBillManifest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvBillManifest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBillManifest.Location = new System.Drawing.Point(57, 20);
+            this.dtgvBillManifest.Name = "dtgvBillManifest";
+            this.dtgvBillManifest.ReadOnly = true;
+            this.dtgvBillManifest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dtgvBillManifest.RowTemplate.Height = 24;
+            this.dtgvBillManifest.Size = new System.Drawing.Size(782, 346);
+            this.dtgvBillManifest.TabIndex = 0;
             // 
             // panel2
             // 
@@ -221,7 +221,7 @@
             this.Name = "fIncome";
             this.Text = "fIncome";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtvgBillManifest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBillManifest)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -240,7 +240,7 @@
         private System.Windows.Forms.DateTimePicker dtpkToDate;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnManifest;
-        private System.Windows.Forms.DataGridView dtvgBillManifest;
+        private System.Windows.Forms.DataGridView dtgvBillManifest;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

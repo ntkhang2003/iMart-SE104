@@ -20,8 +20,7 @@ namespace iMart.DAO
         }
 
         private AccountDAO() { }
-
-        public bool Login (string userName, string passWord)
+        public string HashPass(string passWord)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
             byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
@@ -32,6 +31,11 @@ namespace iMart.DAO
             {
                 hasPass += item;
             }
+            return hasPass;
+        }
+        public bool Login (string userName, string passWord)
+        {
+            string hasPass = HashPass(passWord);
 
             string query = "USP_Login @userName , @passWord";
 
@@ -42,25 +46,8 @@ namespace iMart.DAO
 
         public bool UpdateAccount (string userName, string displayName, string pass, string newPass)
         {
-            byte[] temp01 = ASCIIEncoding.ASCII.GetBytes(pass);
-            byte[] hasData01 = new MD5CryptoServiceProvider().ComputeHash(temp01);
-
-            string hasPass = "";
-
-            foreach (byte item in hasData01)
-            {
-                hasPass += item;
-            }
-
-            byte[] temp02 = ASCIIEncoding.ASCII.GetBytes(newPass);
-            byte[] hasData02 = new MD5CryptoServiceProvider().ComputeHash(temp02);
-
-            string hasNewPass = "";
-
-            foreach (byte item in hasData02)
-            {
-                hasNewPass += item;
-            }
+            string hasPass = HashPass(pass);
+            string hasNewPass = HashPass(newPass);
 
             int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayname , @password , @newPassword", new object[] { userName, displayName, hasPass, hasNewPass });
 
@@ -69,9 +56,12 @@ namespace iMart.DAO
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT userName, DisplayName, accountType FROM dbo.ACCOUNT");
+            return DataProvider.Instance.ExecuteQuery("SELECT userName, displayName, accountType FROM dbo.ACCOUNT");
         }
-
+        public DataTable SearchAccount(string displayName)
+        {
+            return DataProvider.Instance.ExecuteQuery(string.Format("SELECT userName, displayName, accountType FROM dbo.ACCOUNT WHERE displayName LIKE N'%{0}%'", displayName));
+        }
         public Account GetAccountByUserName(string userName)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("Select * from ACCOUNT where userName ='" + userName + "'");
@@ -86,7 +76,7 @@ namespace iMart.DAO
 
         public bool InsertAccount(string name, string displayName, int type)
         {
-            string query = string.Format("INSERT  dbo.ACCOUNT ( UserName, DisplayName, accountType, password )VALUES ( N'{0}', N'{1}', {2}, N'{3}')", name, displayName, type, "1962026656160185351301320480154111117132155");
+            string query = string.Format("INSERT dbo.ACCOUNT ( UserName, DisplayName, accountType, password )VALUES ( N'{0}', N'{1}', {2}, N'{3}')", name, displayName, type, "1962026656160185351301320480154111117132155");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

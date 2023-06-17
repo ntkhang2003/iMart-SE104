@@ -42,7 +42,10 @@ namespace iMart.Forms
         {
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
-
+        void LoadSearchAccount(string displayName)
+        {
+            accountList.DataSource = AccountDAO.Instance.SearchAccount(displayName);
+        }
         void AddAccount(string userName, string displayName, int type)
         {
             if (AccountDAO.Instance.InsertAccount(userName, displayName, type))
@@ -140,6 +143,11 @@ namespace iMart.Forms
             string userName = txtUsername.Text;
 
             ResetPass(userName);
+        }
+
+        private void btnSearchEmployee_Click(object sender, EventArgs e)
+        {
+            LoadSearchAccount(txbSearchEmployee.Text);
         }
     }
 }

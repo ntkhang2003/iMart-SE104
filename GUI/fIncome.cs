@@ -21,7 +21,7 @@ namespace iMart.Forms
         //Methods
         void LoadListBillByDate(DateTime dateBegin, DateTime dateEnd)
         {
-            dtvgBillManifest.DataSource = BillDAO.Instance.GetListBillByDate(dateBegin, dateEnd);
+            dtgvBillManifest.DataSource = BillDAO.Instance.GetListBillByDate(dateBegin, dateEnd);
             txbNumber.Text = BillDAO.Instance.GetNumberOfBill(dateBegin, dateEnd).ToString();
             txbTotalTotal.Text = "$" + BillDAO.Instance.GetTotalOfTotal(dateBegin, dateEnd).ToString();
         }

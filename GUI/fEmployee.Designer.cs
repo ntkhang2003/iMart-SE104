@@ -42,14 +42,14 @@
             this.flpItem = new System.Windows.Forms.FlowLayoutPanel();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearchEmployee = new FontAwesome.Sharp.IconButton();
+            this.txbSearchEmployee = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnShowAccount = new FontAwesome.Sharp.IconButton();
             this.btnEditAccount = new FontAwesome.Sharp.IconButton();
             this.btnDeleteAccount = new FontAwesome.Sharp.IconButton();
             this.btnAddAccount = new FontAwesome.Sharp.IconButton();
-            this.txbSearchEmployee = new System.Windows.Forms.TextBox();
-            this.btnSearchEmployee = new FontAwesome.Sharp.IconButton();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -192,6 +192,8 @@
             // dtgvAccount
             // 
             this.dtgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvAccount.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAccount.Location = new System.Drawing.Point(3, 3);
             this.dtgvAccount.Name = "dtgvAccount";
@@ -209,6 +211,30 @@
             this.panel1.Size = new System.Drawing.Size(386, 52);
             this.panel1.TabIndex = 0;
             // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearchEmployee.IconColor = System.Drawing.Color.Black;
+            this.btnSearchEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearchEmployee.IconSize = 36;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(271, 5);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(59, 42);
+            this.btnSearchEmployee.TabIndex = 3;
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
+            // 
+            // txbSearchEmployee
+            // 
+            this.txbSearchEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSearchEmployee.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearchEmployee.Location = new System.Drawing.Point(73, 7);
+            this.txbSearchEmployee.Multiline = true;
+            this.txbSearchEmployee.Name = "txbSearchEmployee";
+            this.txbSearchEmployee.Size = new System.Drawing.Size(192, 36);
+            this.txbSearchEmployee.TabIndex = 2;
+            this.txbSearchEmployee.WordWrap = false;
+            // 
             // panel4
             // 
             this.panel4.AutoSize = true;
@@ -220,9 +246,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnShowAccount);
-            this.panel2.Controls.Add(this.btnEditAccount);
             this.panel2.Controls.Add(this.btnDeleteAccount);
+            this.panel2.Controls.Add(this.btnEditAccount);
+            this.panel2.Controls.Add(this.btnShowAccount);
             this.panel2.Controls.Add(this.btnAddAccount);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
@@ -239,12 +265,12 @@
             this.btnShowAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnShowAccount.IconColor = System.Drawing.Color.Black;
             this.btnShowAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnShowAccount.Location = new System.Drawing.Point(396, 5);
+            this.btnShowAccount.Location = new System.Drawing.Point(132, 5);
             this.btnShowAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnShowAccount.Name = "btnShowAccount";
             this.btnShowAccount.Size = new System.Drawing.Size(123, 47);
             this.btnShowAccount.TabIndex = 0;
-            this.btnShowAccount.Text = "View";
+            this.btnShowAccount.Text = "Read";
             this.btnShowAccount.UseVisualStyleBackColor = false;
             this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
             // 
@@ -263,7 +289,7 @@
             this.btnEditAccount.Name = "btnEditAccount";
             this.btnEditAccount.Size = new System.Drawing.Size(123, 47);
             this.btnEditAccount.TabIndex = 14;
-            this.btnEditAccount.Text = "Edit";
+            this.btnEditAccount.Text = "Update";
             this.btnEditAccount.UseVisualStyleBackColor = false;
             this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
@@ -277,7 +303,7 @@
             this.btnDeleteAccount.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDeleteAccount.IconColor = System.Drawing.Color.Black;
             this.btnDeleteAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(132, 5);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(396, 5);
             this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(123, 47);
@@ -301,35 +327,13 @@
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(123, 47);
             this.btnAddAccount.TabIndex = 12;
-            this.btnAddAccount.Text = "Add";
+            this.btnAddAccount.Text = "Create";
             this.btnAddAccount.UseVisualStyleBackColor = false;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
-            // txbSearchEmployee
-            // 
-            this.txbSearchEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSearchEmployee.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchEmployee.Location = new System.Drawing.Point(73, 7);
-            this.txbSearchEmployee.Multiline = true;
-            this.txbSearchEmployee.Name = "txbSearchEmployee";
-            this.txbSearchEmployee.Size = new System.Drawing.Size(192, 36);
-            this.txbSearchEmployee.TabIndex = 2;
-            this.txbSearchEmployee.WordWrap = false;
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearchEmployee.IconColor = System.Drawing.Color.Black;
-            this.btnSearchEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearchEmployee.IconSize = 36;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(271, 5);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(59, 42);
-            this.btnSearchEmployee.TabIndex = 3;
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
-            // 
             // fEmployee
             // 
+            this.AcceptButton = this.btnSearchEmployee;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 616);

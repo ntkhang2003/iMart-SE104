@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txbSearchInven = new System.Windows.Forms.TextBox();
             this.dtgvInven = new System.Windows.Forms.DataGridView();
             this.btnSearchInven = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,7 +52,6 @@
             this.btnUpdateInven = new FontAwesome.Sharp.IconButton();
             this.btnReadInven = new FontAwesome.Sharp.IconButton();
             this.btnCreateInven = new FontAwesome.Sharp.IconButton();
-            this.txbSearchInven = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInven)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,6 +72,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 629);
             this.panel1.TabIndex = 0;
+            // 
+            // txbSearchInven
+            // 
+            this.txbSearchInven.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSearchInven.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearchInven.Location = new System.Drawing.Point(112, 14);
+            this.txbSearchInven.Multiline = true;
+            this.txbSearchInven.Name = "txbSearchInven";
+            this.txbSearchInven.Size = new System.Drawing.Size(192, 40);
+            this.txbSearchInven.TabIndex = 4;
+            this.txbSearchInven.WordWrap = false;
             // 
             // dtgvInven
             // 
@@ -348,17 +359,6 @@
             this.btnCreateInven.Text = "Create";
             this.btnCreateInven.UseVisualStyleBackColor = false;
             this.btnCreateInven.Click += new System.EventHandler(this.btnCreateInven_Click);
-            // 
-            // txbSearchInven
-            // 
-            this.txbSearchInven.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSearchInven.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchInven.Location = new System.Drawing.Point(112, 14);
-            this.txbSearchInven.Multiline = true;
-            this.txbSearchInven.Name = "txbSearchInven";
-            this.txbSearchInven.Size = new System.Drawing.Size(192, 40);
-            this.txbSearchInven.TabIndex = 4;
-            this.txbSearchInven.WordWrap = false;
             // 
             // fInventory
             // 
