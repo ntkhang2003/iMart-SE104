@@ -121,7 +121,7 @@
             // 
             this.nmItemCount.AllowDrop = true;
             this.nmItemCount.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmItemCount.Location = new System.Drawing.Point(237, 6);
+            this.nmItemCount.Location = new System.Drawing.Point(237, 2);
             this.nmItemCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -143,7 +143,7 @@
             this.btnAddItem.IconColor = System.Drawing.Color.Black;
             this.btnAddItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddItem.IconSize = 36;
-            this.btnAddItem.Location = new System.Drawing.Point(298, 3);
+            this.btnAddItem.Location = new System.Drawing.Point(298, 2);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(59, 42);
             this.btnAddItem.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.btnAddOrder.Name = "btnAddOrder";
             this.btnAddOrder.Size = new System.Drawing.Size(123, 47);
             this.btnAddOrder.TabIndex = 0;
-            this.btnAddOrder.Text = "Add order";
+            this.btnAddOrder.Text = "Create order";
             this.btnAddOrder.UseVisualStyleBackColor = false;
             this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 

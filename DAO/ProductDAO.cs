@@ -32,16 +32,22 @@ namespace iMart.DAO
             }
             return productList;
         }
+        public List<Product> LoadDeletedList()
+        {
+            List<Product> productList = new List<Product>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetDeletedList");
+            foreach (DataRow item in data.Rows)
+            {
+                Product product = new Product(item);
+                productList.Add(product);
+            }
+            return productList;
+        }
         public List<Product> SearchProductByName(string name) 
         {
             List<Product> productList = new List<Product>();
-
-            string query = string.Format("SELECT idProduct, productName, price, supplierName " +
-                "FROM dbo.PRODUCT JOIN dbo.SUPPLIER ON dbo.PRODUCT.idSupplier = dbo.SUPPLIER.idSupplier " +
-                "WHERE productName LIKE N'%{0}%'", name);
-
+            string query = string.Format("SELECT idProduct, productName, price, supplierName FROM dbo.PRODUCT JOIN dbo.SUPPLIER ON dbo.PRODUCT.idSupplier = dbo.SUPPLIER.idSupplier WHERE productName LIKE N'%{0}%' AND productStatus = 1", name);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
             foreach (DataRow item in data.Rows)
             {
                 Product product = new Product(item);
@@ -54,13 +60,19 @@ namespace iMart.DAO
         public int GetIDProductByName(string name)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT idProduct FROM dbo.PRODUCT WHERE productName = '" + name + "'");
-
-            return (int)data.Rows[0]["idProduct"];
+            try
+            {
+                return (int)data.Rows[0]["idProduct"];
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }            
         }
 
         public bool InsertProduct(string productName, double price, int idSupplier)
         {
-            string query = string.Format("INSERT INTO dbo.PRODUCT (productName, price, idSupplier) VALUES (N'{0}', {1}, {2})", productName, price, idSupplier);
+            string query = string.Format("INSERT INTO dbo.PRODUCT (productName, price, idSupplier, productStatus) VALUES (N'{0}', {1}, {2}, 1)", productName, price, idSupplier);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -75,7 +87,16 @@ namespace iMart.DAO
         public bool DeleteProduct(int idProduct)
         {
             BillDetailDAO.Instance.DeleteBillDetailByProductID(idProduct);
-            string query = string.Format("DELETE FROM dbo.PRODUCT WHERE idProduct = {0}", idProduct);
+            // string query = string.Format("DELETE FROM dbo.PRODUCT WHERE idProduct = {0}", idProduct);
+            string query = string.Format("UPDATE dbo.PRODUCT SET productStatus = 0 WHERE idProduct = {0}", idProduct);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool RestoreProduct(int idProduct)
+        {
+            BillDetailDAO.Instance.DeleteBillDetailByProductID(idProduct);
+            // string query = string.Format("DELETE FROM dbo.PRODUCT WHERE idProduct = {0}", idProduct);
+            string query = string.Format("UPDATE dbo.PRODUCT SET productStatus = 1 WHERE idProduct = {0}", idProduct);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
