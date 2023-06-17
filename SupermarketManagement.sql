@@ -165,14 +165,14 @@ DELETE FROM dbo.BILL
 GO
 DBCC CHECKIDENT ('BILL', RESEED, 0)
 
-ALTER PROC USP_AddTotalPrice
+CREATE PROC USP_AddTotalPrice
 @idBill INT, @totalPrice FLOAT
 AS 
 	UPDATE dbo.BILL SET totalPrice = @totalPrice WHERE idBill = @idBill
 GO
 
 --BillDetail operation
-ALTER PROC USP_InsertBillDetail
+CREATE PROC USP_InsertBillDetail
 @idBill INT, @idProduct INT, @quantity INT
 AS
 BEGIN
@@ -193,6 +193,8 @@ BEGIN
 	ELSE
 	BEGIN
 		INSERT INTO dbo.BILLDETAIL(idBill, idProduct, quantity) VALUES (@idBill, @idProduct, @quantity)
+	END
+END
 
 CREATE PROC USP_UpdateAccount
 @userName NVARCHAR(100), @displayname NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
@@ -217,3 +219,14 @@ GO
 SELECT idProduct FROM dbo.PRODUCT WHERE productName = 'a'
 
 SELECT SUM(totalPrice) FROM dbo.BILL WHERE billDate >= '5/6/2023' AND billDate <= '5/6/2023'
+
+ALTER TABLE BILL
+ADD userName NVARCHAR(100) NOT NULL
+FOREIGN KEY (userName) REFERENCES dbo.ACCOUNT (userName)
+GO
+
+ALTER PROC USP_InsertBill
+@userName NVARCHAR(100)
+AS
+	INSERT INTO dbo.BILL(userName) VALUES(@userName)
+GO
