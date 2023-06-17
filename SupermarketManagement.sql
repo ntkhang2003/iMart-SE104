@@ -28,6 +28,13 @@ CREATE TABLE PRODUCT
 )
 GO
 
+ALTER TABLE PRODUCT ADD productStatus INT -- 1: used || 0: not used
+GO 
+ALTER TABLE PRODUCT ALTER COLUMN productStatus INT NOT NULL
+GO
+UPDATE PRODUCT SET productStatus = 1
+GO
+SELECT * FROM PRODUCT
 CREATE TABLE ACCOUNT
 (
 	userName NVARCHAR(100) PRIMARY KEY,
@@ -58,11 +65,9 @@ CREATE TABLE BILLDETAIL
 GO
 
 --Account operation
-INSERT INTO dbo.ACCOUNT VALUES (N'admin', N'Admin', N'1', 1)
-INSERT INTO dbo.ACCOUNT VALUES (N'khang', N'Khang', N'1', 0)
+INSERT INTO dbo.ACCOUNT VALUES (N'admin', N'Admin', N'1962026656160185351301320480154111117132155', 1)
+INSERT INTO dbo.ACCOUNT VALUES (N'khang', N'Khang', N'1962026656160185351301320480154111117132155', 0)
 GO
-
-UPDATE dbo.ACCOUNT SET passWord = N'1962026656160185351301320480154111117132155'
 
 SELECT * FROM dbo.ACCOUNT
 GO
@@ -101,38 +106,41 @@ SELECT * FROM dbo.SUPPLIER
 GO
 
 --Product operation
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Bond Bread', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Daves Killer Bread', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Pepsi', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Coca-Cola', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Cameo Creme', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Tiger Milk', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Mr Kipling', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Munchos', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Dutch Lady', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Butterball', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Haywards', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Jiffy mix', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Nescafé', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('McCoys (crisp)', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Indomie', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Samyang', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('ReaLemon', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Monster Munch', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Chocodile Twinkie', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Kettle Foods', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Swiss cheese', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('vanilla ice cream', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('gooseberry', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('apricot pits', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('maple syrup', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('kidney beans', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mushroom sauce', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('whole pepper', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mint drops', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('bonbons', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('lollipop', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1)
-
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Bond Bread', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Daves Killer Bread', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Pepsi', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Coca-Cola', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Cameo Creme', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Tiger Milk', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Mr Kipling', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Munchos', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Dutch Lady', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Butterball', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Haywards', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Jiffy mix', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Nescafé', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('McCoys (crisp)', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Indomie', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Samyang', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('ReaLemon', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Monster Munch', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Chocodile Twinkie', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Kettle Foods', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Swiss cheese', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('vanilla ice cream', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('gooseberry', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('apricot pits', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('maple syrup', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('kidney beans', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mushroom sauce', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('whole pepper', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('mint drops', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('bonbons', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('lollipop', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('King Arthur Baking', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Ralcorp', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Nespresso', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
+INSERT INTO dbo.PRODUCT(productName, price, idSupplier) VALUES ('Zest-O', FORMAT(RAND()*(80-5)+5, 'N2'), FLOOR(RAND() * 8) + 1, 1)
 GO
 
 SELECT * FROM dbo.PRODUCT
@@ -148,6 +156,14 @@ CREATE PROC USP_GetProductList
 AS 
 	SELECT idProduct, productName, price, supplierName
 	FROM dbo.PRODUCT JOIN dbo.SUPPLIER ON dbo.PRODUCT.idSupplier = dbo.SUPPLIER.idSupplier
+	WHERE productStatus = 1
+GO
+
+CREATE PROC USP_GetDeletedList
+AS
+	SELECT idProduct, productName, price, supplierName
+	FROM dbo.PRODUCT JOIN dbo.SUPPLIER ON dbo.PRODUCT.idSupplier = dbo.SUPPLIER.idSupplier
+	WHERE productStatus = 0
 GO
 
 --Bill operation

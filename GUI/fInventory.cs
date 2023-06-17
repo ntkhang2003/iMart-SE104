@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace iMart.Forms
 {
@@ -23,10 +24,43 @@ namespace iMart.Forms
         }
 
         //Methods
+        void ProductListHandle()
+        {
+            btnViewOld.Visible = true;
+            btnCreateInven.Visible = true;
+            btnDeleteInven.Visible = true;
+            btnUpdateInven.Visible = true;
+            btnRestoreInven.Visible = false;
+            txbProductName.ReadOnly = false;
+            cbSupplier.Enabled = true;
+            nmProductPrice.ReadOnly = false;
+            nmProductPrice.Enabled = true;
+        }
+        void DeletedListHandle()
+        {
+            btnViewOld.Visible = false;
+            btnCreateInven.Visible = false;
+            btnUpdateInven.Visible = false;
+            btnDeleteInven.Visible = false;
+            btnRestoreInven.Visible = true;
+            txbProductName.ReadOnly = true;
+            cbSupplier.Enabled = false;
+            nmProductPrice.ReadOnly = true;
+            nmProductPrice.Enabled = false;
+        }
         void LoadProductList()
         {
+            ProductListHandle();
             dtgvInven.DataSource = productList;
             productList.DataSource = ProductDAO.Instance.LoadProductList();
+            cbSupplier.DataSource = SupplierDAO.Instance.GetListSupplier();
+            cbSupplier.DisplayMember = "Name";
+        }
+        void LoadDeletedList()
+        {
+            DeletedListHandle();
+            dtgvInven.DataSource = productList; ;
+            productList.DataSource = ProductDAO.Instance.LoadDeletedList();
             cbSupplier.DataSource = SupplierDAO.Instance.GetListSupplier();
             cbSupplier.DisplayMember = "Name";
         }
@@ -95,6 +129,33 @@ namespace iMart.Forms
             {
                 MessageBox.Show("Error occurred when deleting product!");
             }
+        }
+
+        private void btnViewOld_Click(object sender, EventArgs e)
+        {
+            LoadDeletedList();
+        }
+
+        private void btnRestoreInven_Click(object sender, EventArgs e)
+        {
+            int idProduct = Convert.ToInt32(txbProductID.Text);
+            if (ProductDAO.Instance.RestoreProduct(idProduct))
+            {
+                MessageBox.Show("Restore product successfully!");
+                LoadDeletedList();
+            }
+            else
+            {
+                MessageBox.Show("Error occurred when restoring product!");
+            }
+        }
+
+        private void btnSearchInven_Click(object sender, EventArgs e)
+        {
+            dtgvInven.DataSource = productList;
+            productList.DataSource = ProductDAO.Instance.SearchProductByName(txbSearchInven.Text);
+            cbSupplier.DataSource = SupplierDAO.Instance.GetListSupplier();
+            cbSupplier.DisplayMember = "Name";
         }
     }
 }

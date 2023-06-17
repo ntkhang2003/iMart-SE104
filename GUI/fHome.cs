@@ -79,15 +79,12 @@ namespace iMart.Forms
 
         private void btnSearchItem_Click(object sender, EventArgs e)
         {
-            if (txbSearchItem.Text != "")
-            {
-                flpItem.Controls.Clear();
-                SearchProductByName(txbSearchItem.Text);
-            }
-            else
-            {
-                LoadProduct();
-            }
+            flpItem.Controls.Clear();
+            //if (txbSearchItem.Text != "")
+            //    SearchProductByName(txbSearchItem.Text);
+            //else
+            //    LoadProduct();
+            SearchProductByName(txbSearchItem.Text);
         }
 
         private void btnPay_Click(object sender, EventArgs e)

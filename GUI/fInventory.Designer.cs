@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvInven = new System.Windows.Forms.DataGridView();
             this.btnSearchInven = new FontAwesome.Sharp.IconButton();
-            this.txbSearchInven = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txbProductID = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnBinding = new System.Windows.Forms.Panel();
+            this.btnViewOld = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.nmProductPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,14 +46,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbProductName = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnRestoreInven = new FontAwesome.Sharp.IconButton();
             this.btnDeleteInven = new FontAwesome.Sharp.IconButton();
             this.btnUpdateInven = new FontAwesome.Sharp.IconButton();
             this.btnReadInven = new FontAwesome.Sharp.IconButton();
             this.btnCreateInven = new FontAwesome.Sharp.IconButton();
+            this.txbSearchInven = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInven)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnBinding.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmProductPrice)).BeginInit();
             this.panel5.SuspendLayout();
@@ -63,9 +65,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txbSearchInven);
             this.panel1.Controls.Add(this.dtgvInven);
             this.panel1.Controls.Add(this.btnSearchInven);
-            this.panel1.Controls.Add(this.txbSearchInven);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 629);
@@ -95,17 +97,7 @@
             this.btnSearchInven.Size = new System.Drawing.Size(59, 42);
             this.btnSearchInven.TabIndex = 2;
             this.btnSearchInven.UseVisualStyleBackColor = true;
-            // 
-            // txbSearchInven
-            // 
-            this.txbSearchInven.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSearchInven.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchInven.Location = new System.Drawing.Point(112, 20);
-            this.txbSearchInven.Multiline = true;
-            this.txbSearchInven.Name = "txbSearchInven";
-            this.txbSearchInven.Size = new System.Drawing.Size(192, 36);
-            this.txbSearchInven.TabIndex = 1;
-            this.txbSearchInven.WordWrap = false;
+            this.btnSearchInven.Click += new System.EventHandler(this.btnSearchInven_Click);
             // 
             // panel2
             // 
@@ -139,16 +131,34 @@
             this.txbProductID.TabIndex = 4;
             this.txbProductID.WordWrap = false;
             // 
-            // panel6
+            // pnBinding
             // 
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.panel3);
-            this.panel6.Controls.Add(this.panel2);
-            this.panel6.Location = new System.Drawing.Point(535, 293);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(385, 348);
-            this.panel6.TabIndex = 7;
+            this.pnBinding.Controls.Add(this.btnViewOld);
+            this.pnBinding.Controls.Add(this.panel4);
+            this.pnBinding.Controls.Add(this.panel5);
+            this.pnBinding.Controls.Add(this.panel3);
+            this.pnBinding.Controls.Add(this.panel2);
+            this.pnBinding.Location = new System.Drawing.Point(538, 293);
+            this.pnBinding.Name = "pnBinding";
+            this.pnBinding.Size = new System.Drawing.Size(385, 348);
+            this.pnBinding.TabIndex = 7;
+            // 
+            // btnViewOld
+            // 
+            this.btnViewOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnViewOld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewOld.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOld.ForeColor = System.Drawing.Color.White;
+            this.btnViewOld.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnViewOld.IconColor = System.Drawing.Color.Black;
+            this.btnViewOld.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnViewOld.Location = new System.Drawing.Point(72, 275);
+            this.btnViewOld.Name = "btnViewOld";
+            this.btnViewOld.Size = new System.Drawing.Size(250, 47);
+            this.btnViewOld.TabIndex = 8;
+            this.btnViewOld.Text = "View old products";
+            this.btnViewOld.UseVisualStyleBackColor = false;
+            this.btnViewOld.Click += new System.EventHandler(this.btnViewOld_Click);
             // 
             // panel4
             // 
@@ -196,7 +206,7 @@
             this.cbSupplier.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSupplier.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(138, 14);
+            this.cbSupplier.Location = new System.Drawing.Point(138, 11);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(230, 46);
             this.cbSupplier.TabIndex = 3;
@@ -244,14 +254,32 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.btnRestoreInven);
             this.panel7.Controls.Add(this.btnDeleteInven);
             this.panel7.Controls.Add(this.btnUpdateInven);
             this.panel7.Controls.Add(this.btnReadInven);
             this.panel7.Controls.Add(this.btnCreateInven);
             this.panel7.Location = new System.Drawing.Point(535, 12);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(385, 206);
+            this.panel7.Size = new System.Drawing.Size(385, 189);
             this.panel7.TabIndex = 8;
+            // 
+            // btnRestoreInven
+            // 
+            this.btnRestoreInven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnRestoreInven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestoreInven.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestoreInven.ForeColor = System.Drawing.Color.White;
+            this.btnRestoreInven.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRestoreInven.IconColor = System.Drawing.Color.Black;
+            this.btnRestoreInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRestoreInven.Location = new System.Drawing.Point(40, 31);
+            this.btnRestoreInven.Name = "btnRestoreInven";
+            this.btnRestoreInven.Size = new System.Drawing.Size(123, 47);
+            this.btnRestoreInven.TabIndex = 8;
+            this.btnRestoreInven.Text = "Restore";
+            this.btnRestoreInven.UseVisualStyleBackColor = false;
+            this.btnRestoreInven.Click += new System.EventHandler(this.btnRestoreInven_Click);
             // 
             // btnDeleteInven
             // 
@@ -262,7 +290,7 @@
             this.btnDeleteInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDeleteInven.IconColor = System.Drawing.Color.Black;
             this.btnDeleteInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteInven.Location = new System.Drawing.Point(223, 123);
+            this.btnDeleteInven.Location = new System.Drawing.Point(223, 114);
             this.btnDeleteInven.Name = "btnDeleteInven";
             this.btnDeleteInven.Size = new System.Drawing.Size(123, 47);
             this.btnDeleteInven.TabIndex = 7;
@@ -279,7 +307,7 @@
             this.btnUpdateInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUpdateInven.IconColor = System.Drawing.Color.Black;
             this.btnUpdateInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpdateInven.Location = new System.Drawing.Point(40, 123);
+            this.btnUpdateInven.Location = new System.Drawing.Point(40, 114);
             this.btnUpdateInven.Name = "btnUpdateInven";
             this.btnUpdateInven.Size = new System.Drawing.Size(123, 47);
             this.btnUpdateInven.TabIndex = 6;
@@ -296,7 +324,7 @@
             this.btnReadInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnReadInven.IconColor = System.Drawing.Color.Black;
             this.btnReadInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReadInven.Location = new System.Drawing.Point(223, 40);
+            this.btnReadInven.Location = new System.Drawing.Point(223, 31);
             this.btnReadInven.Name = "btnReadInven";
             this.btnReadInven.Size = new System.Drawing.Size(123, 47);
             this.btnReadInven.TabIndex = 5;
@@ -313,7 +341,7 @@
             this.btnCreateInven.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCreateInven.IconColor = System.Drawing.Color.Black;
             this.btnCreateInven.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCreateInven.Location = new System.Drawing.Point(40, 40);
+            this.btnCreateInven.Location = new System.Drawing.Point(40, 31);
             this.btnCreateInven.Name = "btnCreateInven";
             this.btnCreateInven.Size = new System.Drawing.Size(123, 47);
             this.btnCreateInven.TabIndex = 4;
@@ -321,13 +349,25 @@
             this.btnCreateInven.UseVisualStyleBackColor = false;
             this.btnCreateInven.Click += new System.EventHandler(this.btnCreateInven_Click);
             // 
+            // txbSearchInven
+            // 
+            this.txbSearchInven.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSearchInven.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearchInven.Location = new System.Drawing.Point(112, 14);
+            this.txbSearchInven.Multiline = true;
+            this.txbSearchInven.Name = "txbSearchInven";
+            this.txbSearchInven.Size = new System.Drawing.Size(192, 40);
+            this.txbSearchInven.TabIndex = 4;
+            this.txbSearchInven.WordWrap = false;
+            // 
             // fInventory
             // 
+            this.AcceptButton = this.btnSearchInven;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 653);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnBinding);
             this.Controls.Add(this.panel1);
             this.Name = "fInventory";
             this.Text = "Form1";
@@ -336,7 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInven)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel6.ResumeLayout(false);
+            this.pnBinding.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmProductPrice)).EndInit();
@@ -353,12 +393,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txbSearchInven;
         private FontAwesome.Sharp.IconButton btnSearchInven;
         private System.Windows.Forms.DataGridView dtgvInven;
         private System.Windows.Forms.TextBox txbProductID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnBinding;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbProductName;
@@ -373,5 +412,8 @@
         private FontAwesome.Sharp.IconButton btnDeleteInven;
         private FontAwesome.Sharp.IconButton btnUpdateInven;
         private System.Windows.Forms.ComboBox cbSupplier;
+        private FontAwesome.Sharp.IconButton btnViewOld;
+        private FontAwesome.Sharp.IconButton btnRestoreInven;
+        private System.Windows.Forms.TextBox txbSearchInven;
     }
 }
