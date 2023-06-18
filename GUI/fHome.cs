@@ -128,14 +128,18 @@ namespace iMart.Forms
             Font font = new Font("Arial", 12);
             int leftMargin = e.MarginBounds.Left;
             int topMargin = e.MarginBounds.Top;
-
+            int c = 0;
             // Loop through each item in the list view and print its text
             foreach (ListViewItem item in lv.Items)
             {
                 foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
                 {
                     e.Graphics.DrawString(subItem.Text, font, Brushes.Black, leftMargin, topMargin, new StringFormat());
-                    leftMargin += 100;
+                    if (c % 4 == 0)
+                        leftMargin += 300;
+                    else
+                        leftMargin += 70;
+                    c++;
                 }
                 topMargin += 20;
                 leftMargin = e.MarginBounds.Left;
