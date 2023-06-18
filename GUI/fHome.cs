@@ -3,6 +3,7 @@ using iMart.DTO;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 using Menu = iMart.DTO.Menu;
 
@@ -91,17 +92,55 @@ namespace iMart.Forms
         {
             if (MessageBox.Show("Confirm payment?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK)
             {
+                // Create a new PrintDocument object
+                PrintDocument pd = new PrintDocument();
+
+                // Set the PrintPage event handler
+                pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+
+                // Show the PrintDialog to allow the user to select a printer and printing options
+                PrintDialog pdialog = new PrintDialog();
+                if (pdialog.ShowDialog() == DialogResult.OK)
+                {
+                    pd.PrinterSettings = pdialog.PrinterSettings;
+                    pd.Print();
+                }
                 int idBill = BillDAO.Instance.GetMaxIDBill();
                 lsvBill.Visible = false;
                 btnAddOrder.Enabled = true;
+                btnAddOrder.BackColor = Color.FromArgb(0, 153, 76);
                 BillDAO.Instance.AddTotalPrice(idBill, Convert.ToDouble(txbTotal.Text.Remove(0, 1)));
                 txbTotal.Text = "$0";
                 btnPay.Enabled = false;
+                btnPay.BackColor = Color.Gray;
+                btnCancelOrder.Enabled = false;
+                btnCancelOrder.BackColor = Color.Gray;
                 lsvBill.Items.Clear();
                 btnAddItem.Enabled = false;
             }
         }
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Get the list view control to print
+            ListView lv = lsvBill;
 
+            // Set the font and margin sizes
+            Font font = new Font("Arial", 12);
+            int leftMargin = e.MarginBounds.Left;
+            int topMargin = e.MarginBounds.Top;
+
+            // Loop through each item in the list view and print its text
+            foreach (ListViewItem item in lv.Items)
+            {
+                foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
+                {
+                    e.Graphics.DrawString(subItem.Text, font, Brushes.Black, leftMargin, topMargin, new StringFormat());
+                    leftMargin += 100;
+                }
+                topMargin += 20;
+                leftMargin = e.MarginBounds.Left;
+            }
+        }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             int idBill = BillDAO.Instance.GetMaxIDBill();
@@ -126,7 +165,25 @@ namespace iMart.Forms
             lsvBill.Visible = true;
             btnAddItem.Enabled = true;
             btnAddOrder.Enabled = false;
+            btnAddOrder.BackColor = Color.Gray;
             btnPay.Enabled = true;
+            btnPay.BackColor = Color.FromArgb(0, 153, 76);
+            btnCancelOrder.Enabled = true;
+            btnCancelOrder.BackColor = Color.FromArgb(0, 153, 76);
+        }
+
+        private void btnCancelOrder_Click(object sender, EventArgs e)
+        {
+            lsvBill.Items.Clear();
+            BillDAO.Instance.CancelOrder();
+            btnPay.Enabled = false;
+            btnPay.BackColor = Color.Gray;
+            btnCancelOrder.Enabled = false;
+            btnCancelOrder.BackColor = Color.Gray;
+            btnAddOrder.Enabled = true;
+            btnAddOrder.BackColor = Color.FromArgb(0, 153, 76);
+            btnAddItem.Enabled = false;
+            txbTotal.Text = "$0";
         }
     }
 }

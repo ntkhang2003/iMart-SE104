@@ -38,6 +38,7 @@
             this.btnAddItem = new FontAwesome.Sharp.IconButton();
             this.txbItemName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancelOrder = new FontAwesome.Sharp.IconButton();
             this.btnPay = new FontAwesome.Sharp.IconButton();
             this.btnAddOrder = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -166,6 +167,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnCancelOrder);
             this.panel3.Controls.Add(this.btnPay);
             this.panel3.Controls.Add(this.btnAddOrder);
             this.panel3.Location = new System.Drawing.Point(540, 588);
@@ -173,9 +175,27 @@
             this.panel3.Size = new System.Drawing.Size(380, 53);
             this.panel3.TabIndex = 3;
             // 
+            // btnCancelOrder
+            // 
+            this.btnCancelOrder.BackColor = System.Drawing.Color.Gray;
+            this.btnCancelOrder.Enabled = false;
+            this.btnCancelOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelOrder.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelOrder.ForeColor = System.Drawing.Color.White;
+            this.btnCancelOrder.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCancelOrder.IconColor = System.Drawing.Color.Black;
+            this.btnCancelOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelOrder.Location = new System.Drawing.Point(261, 3);
+            this.btnCancelOrder.Name = "btnCancelOrder";
+            this.btnCancelOrder.Size = new System.Drawing.Size(123, 47);
+            this.btnCancelOrder.TabIndex = 2;
+            this.btnCancelOrder.Text = "Cancel order";
+            this.btnCancelOrder.UseVisualStyleBackColor = false;
+            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
+            // 
             // btnPay
             // 
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(76)))));
+            this.btnPay.BackColor = System.Drawing.Color.Gray;
             this.btnPay.Enabled = false;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,7 +203,7 @@
             this.btnPay.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnPay.IconColor = System.Drawing.Color.Black;
             this.btnPay.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPay.Location = new System.Drawing.Point(206, 3);
+            this.btnPay.Location = new System.Drawing.Point(132, 3);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(123, 47);
             this.btnPay.TabIndex = 1;
@@ -200,7 +220,7 @@
             this.btnAddOrder.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddOrder.IconColor = System.Drawing.Color.Black;
             this.btnAddOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddOrder.Location = new System.Drawing.Point(69, 3);
+            this.btnAddOrder.Location = new System.Drawing.Point(3, 3);
             this.btnAddOrder.Name = "btnAddOrder";
             this.btnAddOrder.Size = new System.Drawing.Size(123, 47);
             this.btnAddOrder.TabIndex = 0;
@@ -337,5 +357,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbTotal;
         private FontAwesome.Sharp.IconButton btnAddOrder;
+        private FontAwesome.Sharp.IconButton btnCancelOrder;
     }
 }

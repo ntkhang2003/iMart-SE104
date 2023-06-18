@@ -5,16 +5,27 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMart", "iMart.csproj", "{4CC54990-F760-44F5-8C4A-A89240222B42}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "iMartSupermarket", "..\iMartSupermarket\iMartSupermarket.aiproj", "{0A92FC25-C429-4321-818A-04FDBD1FD05E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4CC54990-F760-44F5-8C4A-A89240222B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CC54990-F760-44F5-8C4A-A89240222B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC54990-F760-44F5-8C4A-A89240222B42}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC54990-F760-44F5-8C4A-A89240222B42}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
 		{4CC54990-F760-44F5-8C4A-A89240222B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC54990-F760-44F5-8C4A-A89240222B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.Debug|Any CPU.Build.0 = DefaultBuild
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{0A92FC25-C429-4321-818A-04FDBD1FD05E}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

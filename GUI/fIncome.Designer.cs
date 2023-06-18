@@ -93,7 +93,7 @@
             this.btnManifest.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnManifest.IconColor = System.Drawing.Color.Black;
             this.btnManifest.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnManifest.Location = new System.Drawing.Point(392, 67);
+            this.btnManifest.Location = new System.Drawing.Point(401, 68);
             this.btnManifest.Name = "btnManifest";
             this.btnManifest.Size = new System.Drawing.Size(123, 47);
             this.btnManifest.TabIndex = 2;

@@ -80,6 +80,26 @@ BEGIN
 END
 GO
 
+CREATE PROC USP_UpdateAccount
+@userName NVARCHAR(100), @displayname NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
+AS
+BEGIN
+	DECLARE @isRightPass INT = 0
+
+	SELECT @isRightPass = COUNT (*) FROM dbo.ACCOUNT WHERE userName = @userName AND passWord = @password
+
+	IF (@isRightPass = 1)
+	BEGIN
+		IF (@newPassword = NULL OR @newPassword = '')
+		BEGIN
+			UPDATE dbo.ACCOUNT SET displayName = @displayname WHERE userName = @userName
+		END
+		ELSE
+			UPDATE dbo.ACCOUNT SET displayName = @displayname, passWord = @newPassword WHERE userName = @userName
+	END
+END
+GO
+
 --Supplier operation
 INSERT INTO dbo.SUPPLIER(supplierName) VALUES ('Sa ltd.')
 INSERT INTO dbo.SUPPLIER(supplierName) VALUES ('Sb ltd.')
@@ -166,6 +186,13 @@ BEGIN
 END
 GO
 
+CREATE PROC USP_GetListByMaxID
+AS
+BEGIN
+	SELECT cashierName, billDate, totalPrice
+	FROM dbo.BILL
+END
+GO
 --BillDetail operation
 CREATE PROC USP_InsertBillDetail
 @idBill INT, @idProduct INT, @quantity INT
@@ -192,22 +219,9 @@ BEGIN
 END
 GO
 
-CREATE PROC USP_UpdateAccount
-@userName NVARCHAR(100), @displayname NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
+CREATE PROC USP_CancelOrder
 AS
 BEGIN
-	DECLARE @isRightPass INT = 0
-
-	SELECT @isRightPass = COUNT (*) FROM dbo.ACCOUNT WHERE userName = @userName AND passWord = @password
-
-	IF (@isRightPass = 1)
-	BEGIN
-		IF (@newPassword = NULL OR @newPassword = '')
-		BEGIN
-			UPDATE dbo.ACCOUNT SET displayName = @displayname WHERE userName = @userName
-		END
-		ELSE
-			UPDATE dbo.ACCOUNT SET displayName = @displayname, passWord = @newPassword WHERE userName = @userName
-	END
+	DELETE FROM dbo.BILLDETAIL WHERE idBill = (SELECT MAX(dbo.BILL.idBill) FROM dbo.BILL)
+	DELETE FROM dbo.BILL WHERE idBill = (SELECT MAX(dbo.BILL.idBill) FROM dbo.BILL)
 END
-GO

@@ -41,5 +41,9 @@ namespace iMart.DAO
         {
             return (double)DataProvider.Instance.ExecuteScalar("SELECT SUM(totalPrice) FROM dbo.BILL WHERE billDate >= '" + dateBegin + "' AND billDate <= '" + dateEnd + "'");
         }
+        public void CancelOrder()
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_CancelOrder");
+        }
     }
 }
