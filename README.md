@@ -6,7 +6,7 @@
 * Access involved documents for more details.
 
 ## Instructor
-* ThS. Nguyễn Thị Thanh Trúc - Khoa Công nghệ phần mềm, Trường Đh Công nghệ thông tin - ĐHQGHCM.
+* ThS. Nguyễn Thị Thanh Trúc - Khoa Công nghệ phần mềm, Trường ĐH Công nghệ thông tin - ĐHQGHCM.
 
 ## Students
 
@@ -21,5 +21,5 @@
 ## Installation
   * Run `SupermarketManagement.sql` file.
   * Copy `App.config.example` to `App.config` and edit the connectionString.
-  * Install (FontAwesome.Sharp)[https://www.nuget.org/packages/FontAwesome.Sharp] in Nuget Packages Visual Studio.
+  * Install [FontAwesome.Sharp](https://www.nuget.org/packages/FontAwesome.Sharp) in Nuget Packages Visual Studio.
 
