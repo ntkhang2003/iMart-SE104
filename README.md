@@ -19,7 +19,7 @@
 
 
 ## Installation
-  * Run SupermarketManagement.sql file.
+  * Run `SupermarketManagement.sql` file.
   * Copy `App.config.example` to `App.config` and edit the connectionString.
-  * Install `FontAwesome.Sharp` in Nuget Packages Visual Studio.
+  * Install (FontAwesome.Sharp)[https://www.nuget.org/packages/FontAwesome.Sharp] in Nuget Packages Visual Studio.
 
