@@ -1,12 +1,12 @@
 # iMart - Supermarket Management System
 
 ## Introduction
-* This application is the final project for SE104 course
-* This application is built based on 3-layer model and C# Winforms
-* Access involved documents for more details
+* This application is the final project for SE104 course.
+* This application is built based on 3-layer model and C# Winforms.
+* Access involved documents for more details.
 
 ## Instructor
-* ThS. Nguyễn Thị Thanh Trúc - Khoa Công nghệ phần mềm, Trường Đh Công nghệ thông tin - ĐHQGHCM
+* ThS. Nguyễn Thị Thanh Trúc - Khoa Công nghệ phần mềm, Trường Đh Công nghệ thông tin - ĐHQGHCM.
 
 ## Students
 
@@ -19,6 +19,7 @@
 
 
 ## Installation
-  * Copy `App.config.example` to `App.config` and edit the connectionString
-  * Install `FontAwesome.Sharp` in Nuget Packages Visual Studio
-  * Download and install [Microsoft RDLC Report Designer 2022](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftRdlcReportDesignerforVisualStudio2022)
+  * Run SupermarketManagement.sql file.
+  * Copy `App.config.example` to `App.config` and edit the connectionString.
+  * Install `FontAwesome.Sharp` in Nuget Packages Visual Studio.
+
